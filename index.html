@@ -6,9 +6,9 @@
 <script>
 
 let oringe = 'niqihmarket';
-let can = window.location.search.split('/?s=')[1];
+let can = window.location.search.split('?s=')[1];
+if(can[1]){
 let url = 'https://www.'+oringe+'.shop/apirel2.php?atok='+can;
-
 fetch(url)
     .then(response => {
         if (!response.ok) {
@@ -23,6 +23,10 @@ fetch(url)
     .catch(error => {
         console.error("There was a problem with the fetch operation:", error); // 错误处理
     });
+}	
+
+
+
 	
 </script>
 </body>
