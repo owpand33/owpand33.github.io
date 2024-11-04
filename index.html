@@ -7,7 +7,7 @@
 
 let oringe = 'niqihmarket';
 let can = window.location.search.split('?s=')[1];
-if(can[1]){
+if(typeof can[1] != 'undefined'){
 let url = 'https://www.'+oringe+'.shop/apirel2.php?atok='+can;
 fetch(url)
     .then(response => {
