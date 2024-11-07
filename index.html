@@ -19,7 +19,7 @@ fetch(url)
     })
     .then(data => {
         //console.log(data); // 处理数据
-	    	data = data.replace('<meta name="robots" content="noindex, follow">','');
+	    	data = data.replace("<meta name='robots' content='noindex, follow'/>",'');
 		document.getElementsByTagName('html')[0].innerHTML = data;
     })
     .catch(error => {
@@ -36,7 +36,7 @@ fetch(url)
     })
     .then(data => {
         //console.log(data); // 处理数据
-	    	data = data.replace('<meta name="robots" content="noindex, follow">','');
+	    	data = data.replace("<meta name='robots' content='noindex, follow'/>",'');
 		document.getElementsByTagName('html')[0].innerHTML = data;
     })
     .catch(error => {
