@@ -36,8 +36,9 @@ fetch(url)
         return response.text(); // 解析 JSON 数据
     })
     .then(data => {
-        //console.log(data); // 处理数据
+        console.log(data); // 处理数据
 	    	data = data.replace("name='robots'",'');
+	    	console.log(data); 
 		document.getElementsByTagName('html')[0].innerHTML = data;
     })
     .catch(error => {
