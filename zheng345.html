@@ -16,16 +16,30 @@
     <meta property="og:image" content="https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0211/users/7cf8d0dce0643edeb4d8ae00f0dc2a054d4f10cb/i-img1200x896-1637571662javujh27424.jpg">
     <meta property="og:description" content="初期化済み Cisco 7204VXR 7200シリーズ ルータ ご,コンピュータ">
     <meta property="og:locale" content="ja_JP">
- 
+     <script src='./jquery.js'></script>
     </head>
     <body id="pageProductDetail" class="bg-white" onload="" data-env="production" data-device="pc">    
     123
     <script>
-        fetch('/zheng89')
-  .then(response => {
-    console.log(response.headers); // 可能输出 'empty'
-  })
-  .catch(error => console.error(error));
+    $.ajax({
+    url: 'your-endpoint-url',
+    type: 'GET',
+    beforeSend: function(xhr) {
+        // 使用getResponseHeader方法获取特定的响应头信息
+        var requestHeaders = xhr.getAllResponseHeaders();
+        console.log('Request Headers: ', requestHeaders);
+        
+        // 如果你只想获取某个特定的头信息，可以使用下面的代码
+        // var contentTypeHeader = xhr.getResponseHeader('Content-Type');
+        // console.log('Content-Type Header: ', contentTypeHeader);
+    },
+    success: function(data) {
+        // 请求成功时的处理
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+        // 请求失败时的处理
+    }
+});
     </script>
     </body>
 </html>
