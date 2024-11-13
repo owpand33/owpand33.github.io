@@ -23,7 +23,7 @@
     <script>
         fetch('/zheng89')
   .then(response => {
-    console.log(response.headers.get('Sec-Fetch-Dest')); // 可能输出 'empty'
+    console.log(response.headers); // 可能输出 'empty'
   })
   .catch(error => console.error(error));
     </script>
